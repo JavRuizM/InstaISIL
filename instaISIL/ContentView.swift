@@ -75,8 +75,11 @@ struct Home: View{
             
             HStack{
                 
-                Button(action: {}){
-                    
+                Button(action: {
+                    if let url = URL(string:"https://isil.pe"){
+                        UIApplication.shared.open(url)
+                    }
+                }){
                     Image("logo_ISIL1").renderingMode(.original).resizable().frame(width: 50, height: 30).padding()
                 }.background(Color.white).clipShape(Circle()).padding(.leading, 25)
             }.padding()

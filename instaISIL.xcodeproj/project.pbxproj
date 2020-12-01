@@ -15,6 +15,7 @@
 		42C081852536418A00EB7C65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C081832536418A00EB7C65 /* LaunchScreen.storyboard */; };
 		42C081902536418A00EB7C65 /* instaISILTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C0818F2536418A00EB7C65 /* instaISILTests.swift */; };
 		42C0819B2536418A00EB7C65 /* instaISILUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C0819A2536418A00EB7C65 /* instaISILUITests.swift */; };
+		AFA20B18257650B80047D4E0 /* Publications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA20B17257650B80047D4E0 /* Publications.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		42C081962536418A00EB7C65 /* instaISILUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instaISILUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C0819A2536418A00EB7C65 /* instaISILUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instaISILUITests.swift; sourceTree = "<group>"; };
 		42C0819C2536418A00EB7C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFA20B17257650B80047D4E0 /* Publications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Publications.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,9 @@
 		42C081772536418900EB7C65 /* instaISIL */ = {
 			isa = PBXGroup;
 			children = (
+				AFA20B1525764FCB0047D4E0 /* IPhone */,
+				AFA20B1425764FBD0047D4E0 /* BL */,
+				AFA20B1325764AAC0047D4E0 /* BE */,
 				42C081782536418900EB7C65 /* AppDelegate.swift */,
 				42C0817A2536418900EB7C65 /* SceneDelegate.swift */,
 				42C0817C2536418900EB7C65 /* ContentView.swift */,
@@ -134,6 +139,44 @@
 				42C0819C2536418A00EB7C65 /* Info.plist */,
 			);
 			path = instaISILUITests;
+			sourceTree = "<group>";
+		};
+		AFA20B1325764AAC0047D4E0 /* BE */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BE;
+			sourceTree = "<group>";
+		};
+		AFA20B1425764FBD0047D4E0 /* BL */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BL;
+			sourceTree = "<group>";
+		};
+		AFA20B1525764FCB0047D4E0 /* IPhone */ = {
+			isa = PBXGroup;
+			children = (
+				AFA20B1F257651590047D4E0 /* Classes */,
+				AFA20B1625764FD90047D4E0 /* Views */,
+			);
+			path = IPhone;
+			sourceTree = "<group>";
+		};
+		AFA20B1625764FD90047D4E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AFA20B17257650B80047D4E0 /* Publications.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AFA20B1F257651590047D4E0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +285,7 @@
 				42C081852536418A00EB7C65 /* LaunchScreen.storyboard in Resources */,
 				42C081822536418A00EB7C65 /* Preview Assets.xcassets in Resources */,
 				42C0817F2536418A00EB7C65 /* Assets.xcassets in Resources */,
+				AFA20B18257650B80047D4E0 /* Publications.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
