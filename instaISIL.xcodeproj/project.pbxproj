@@ -101,6 +101,7 @@
 		42C081772536418900EB7C65 /* instaISIL */ = {
 			isa = PBXGroup;
 			children = (
+				AF059BAC2576FAD800C4241F /* WS */,
 				AFA20B1525764FCB0047D4E0 /* IPhone */,
 				AFA20B1425764FBD0047D4E0 /* BL */,
 				AFA20B1325764AAC0047D4E0 /* BE */,
@@ -139,6 +140,13 @@
 				42C0819C2536418A00EB7C65 /* Info.plist */,
 			);
 			path = instaISILUITests;
+			sourceTree = "<group>";
+		};
+		AF059BAC2576FAD800C4241F /* WS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WS;
 			sourceTree = "<group>";
 		};
 		AFA20B1325764AAC0047D4E0 /* BE */ = {

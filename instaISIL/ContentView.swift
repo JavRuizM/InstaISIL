@@ -11,7 +11,17 @@ struct ContentView: View {
     var body: some View {
         
         ZStack{
-            LinearGradient(gradient: .init(colors:[Color(.white), Color("primary"), Color("primary"), Color("primary"), Color("primary"), Color("primary"), Color ("primary"), Color(.black)]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
+            LinearGradient(gradient: .init(colors:[Color(.white),
+                                                   Color("primary"),
+                                                   Color("primary"),
+                                                   Color("primary"),
+                                                   Color("primary"),
+                                                   Color("primary"),
+                                                   Color ("primary"),
+                                                   Color(.black)]
+            ),
+            startPoint: .top,
+            endPoint: .bottom).edgesIgnoringSafeArea(.all)
             
             Home()
         }
@@ -31,22 +41,45 @@ struct Home: View{
         
         VStack{
             
-            Image("logo_ISIL2").resizable().frame(width: 200, height: 150)
+            Image("logo_ISIL2")
+                .resizable()
+                .frame(width: 200, height: 150)
             
             
             HStack{
                 
-                Button(action: {withAnimation(.spring(response: 0.8, dampingFraction: 0.5, blendDuration: 0.5)){self.index = 0}}){
+                Button(action: {
+                    withAnimation(.spring(response: 0.8,
+                                          dampingFraction: 0.5,
+                                          blendDuration: 0.5)){self.index = 0}
+                }){
                     
-                    Text("Ingresar").foregroundColor(self.index == 0 ? .black : .white).fontWeight(.bold).padding(.vertical, 10).frame(width: (UIScreen.main.bounds.width-50)/2)
-                }.background(self.index == 0 ? Color.white: Color.clear).clipShape(Capsule())
+                    Text("Ingresar")
+                        .foregroundColor(self.index == 0 ? .black : .white)
+                        .fontWeight(.bold)
+                        .padding(.vertical, 10)
+                        .frame(width: (UIScreen.main.bounds.width-50)/2)
+                }
+                .background(self.index == 0 ? Color.white: Color.clear)
+                .clipShape(Capsule())
                 
-                Button(action: {withAnimation(.spring(response: 0.8, dampingFraction: 0.5, blendDuration: 0.5)){self.index = 1}}){
+                Button(action: {
+                        withAnimation(.spring(response: 0.8,
+                                              dampingFraction: 0.5,
+                                              blendDuration: 0.5)){self.index = 1}}){
                     
-                    Text("Regístrate").foregroundColor(self.index == 1 ? .black : .white).fontWeight(.bold).padding(.vertical, 10).frame(width: (UIScreen.main.bounds.width - 50)/2)
-                }.background(self.index == 1 ? Color.white: Color.clear).clipShape(Capsule())
+                    Text("Regístrate")
+                        .foregroundColor(self.index == 1 ? .black : .white)
+                        .fontWeight(.bold)
+                        .padding(.vertical, 10)
+                        .frame(width: (UIScreen.main.bounds.width - 50)/2)
+                }
+                .background(self.index == 1 ? Color.white: Color.clear)
+                .clipShape(Capsule())
                 	
-            }.background(Color.black.opacity(0.1)).clipShape(Capsule()).padding(.top, 25)
+            }
+            .background(Color.black.opacity(0.1))
+            .clipShape(Capsule()).padding(.top, 25)
             
             
             if self.index == 0{
@@ -59,18 +92,24 @@ struct Home: View{
                         
             
             Button(action: {} ){
-                Text("Olvidaste tu contraseña?").foregroundColor(.white)
-            }.padding(.top, 20)
+                Text("Olvidaste tu contraseña?")
+                    .foregroundColor(.white)
+            }
+            .padding(.top, 20)
             
             
             HStack(spacing: 15){
                 
-                Color.white.opacity(0.7).frame(width: 20, height: 1)
+                Color.white.opacity(0.7)
+                    .frame(width: 20, height: 1)
                 
-                Text("Visita nuestra WEB").foregroundColor(.white)
+                Text("Visita nuestra WEB")
+                    .foregroundColor(.white)
                 
-                Color.white.opacity(0.7).frame(width: 20, height: 1)
-            }.padding(.top, 10)
+                Color.white.opacity(0.7)
+                    .frame(width: 20, height: 1)
+            }
+            .padding(.top, 10)
             
             
             HStack{
@@ -80,11 +119,19 @@ struct Home: View{
                         UIApplication.shared.open(url)
                     }
                 }){
-                    Image("logo_ISIL1").renderingMode(.original).resizable().frame(width: 50, height: 30).padding()
-                }.background(Color.white).clipShape(Circle()).padding(.leading, 25)
-            }.padding()
+                    Image("logo_ISIL1")
+                        .renderingMode(.original)
+                        .resizable()
+                        .frame(width: 50, height: 30).padding()
+                }
+                .background(Color.white)
+                .clipShape(Circle())
+                .padding(.leading, 25)
+            }
+            .padding()
             
-        }.padding()
+        }
+        .padding()
     }
 }
 
@@ -92,6 +139,9 @@ struct Login: View {
     
     @State var mail = ""
     @State var pass = ""
+    @State var visible = false
+    @State var alert = false
+    @State var error = ""
     
     var body: some View{
         
@@ -101,35 +151,67 @@ struct Login: View {
                 
                 HStack(spacing: 15){
                     
-                    Image(systemName: "envelope").foregroundColor(.black)
+                    Image(systemName: "envelope")
+                        .foregroundColor(.black)
                     
-                    TextField("Ingresar codigo", text: self.$mail)
-                }.padding(.vertical, 20)
+                    TextField("Ingresar usuario", text: self.$mail)
+                }
+                .padding(.vertical, 20)
                 
                 Divider()
                 
                 
                 HStack(spacing: 15) {
                     
-                    Image(systemName: "lock").resizable().frame(width: 15, height: 18).foregroundColor(.black)
+                    Image(systemName: "lock")
+                        .resizable()
+                        .frame(width: 15, height: 18)
+                        .foregroundColor(.black)
                     
-                    SecureField("Ingresar contraseña", text: self.$pass)
-                    
-                    Button(action:{
-                        
-                    }){
-                        Image(systemName: "eye").foregroundColor(.black)
+                    if self.visible{
+                        TextField("Ingresar contraseña", text: self.$pass)
+                    }
+                    else{
+                        SecureField("Ingresar contraseña", text: self.$pass)
                     }
                     
-                }.padding(.vertical, 20)
+                    Button(action:{
+                        self.visible.toggle()
+                    }){
+                        Image(systemName: "eye")
+                            .foregroundColor(.black)
+                    }
+                    
+                }
+                .padding(.vertical, 20)
                 
-            }.padding(.vertical).padding(.horizontal, 20).padding(.bottom, 40).background(Color .white).cornerRadius(10).padding(.top, 25)
+            }
+            .padding(.vertical)
+            .padding(.horizontal, 20)
+            .padding(.bottom, 40)
+            .background(Color.white)
+            .cornerRadius(10)
+            .padding(.top, 25)
             
             Button(action: {}){
                 
-                Text("LOGIN").foregroundColor(.white).fontWeight(.bold).padding(.vertical).frame(width: UIScreen.main.bounds.width - 100)
+                Text("LOGIN")
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
+                    .padding(.vertical)
+                    .frame(width: UIScreen.main.bounds.width - 100)
                 
-            }.background(LinearGradient(gradient: .init(colors:[Color("primary"), Color("primary"), Color(.white)]), startPoint: .leading, endPoint: .trailing)).cornerRadius(8).offset(y: -40).padding(.bottom, -40).shadow(radius: 15)
+            }
+            .background(LinearGradient(gradient: .init(colors:[Color("primary"),
+                                                               Color("primary"),
+                                                               Color(.white)]
+            ),
+            startPoint: .leading,
+            endPoint: .trailing))
+            .cornerRadius(8)
+            .offset(y: -40)
+            .padding(.bottom, -40)
+            .shadow(radius: 15)
         }
     }
 }
@@ -139,6 +221,8 @@ struct SignUp: View {
     @State var mail = ""
     @State var pass = ""
     @State var repass = ""
+    @State var visiblePass = false
+    @State var visibleRePass = false
     
     var body: some View{
         
@@ -148,51 +232,142 @@ struct SignUp: View {
                 
                 HStack(spacing: 15){
                     
-                    Image(systemName: "envelope").foregroundColor(.black)
+                    Image(systemName: "envelope")
+                        .foregroundColor(.black)
                     
-                    TextField("Ingresar código", text: self.$mail)
-                }.padding(.vertical, 20)
+                    TextField("Ingresar usuario", text: self.$mail)
+                }
+                .padding(.vertical, 20)
+                
                 
                 Divider()
                 
                 
                 HStack(spacing: 15) {
                     
-                    Image(systemName: "lock").resizable().frame(width: 15, height: 18).foregroundColor(.black)
+                    Image(systemName: "lock")
+                        .resizable()
+                        .frame(width: 15, height: 18)
+                        .foregroundColor(.black)
                     
-                    SecureField("Ingresar contraseña", text: self.$pass)
+                    if self.visiblePass{
+                        TextField("Ingresar contraseña", text: self.$pass)
+                    }
+                    else{
+                        SecureField("Ingresar contraseña", text: self.$pass)
+                    }
                     
                     Button(action:{
-                        
+                            self.visiblePass.toggle()
                     }){
-                        Image(systemName: "eye").foregroundColor(.black)
+                        Image(systemName: "eye")
+                            .foregroundColor(.black)
                     }
                     
                 }.padding(.vertical, 20)
+                
                 
                 Divider()
                 
                 
                 HStack(spacing: 15) {
                     
-                    Image(systemName: "lock").resizable().frame(width: 15, height: 18).foregroundColor(.black)
+                    Image(systemName: "lock")
+                        .resizable()
+                        .frame(width: 15, height: 18)
+                        .foregroundColor(.black)
                     
-                    SecureField("Confirmar contraseña", text: self.$repass)
                     
-                    Button(action:{
-                        
-                    }){
-                        Image(systemName: "eye").foregroundColor(.black)
+                    if self.visibleRePass{
+                        TextField("Confirmar contraseña", text: self.$repass)
+                    }
+                    else{
+                        SecureField("Confirmar contraseña", text: self.$repass)
                     }
                     
-                }.padding(.vertical, 20)
-            }.padding(.vertical).padding(.horizontal, 20).padding(.bottom, 40).background(Color .white).cornerRadius(10).padding(.top, 25)
+                    Button(action:{
+                            self.visibleRePass.toggle()
+                    }){
+                        Image(systemName: "eye")
+                            .foregroundColor(.black)
+                    }
+                    
+                }
+                .padding(.vertical, 20)
+            }
+            .padding(.vertical)
+            .padding(.horizontal, 20)
+            .padding(.bottom, 40)
+            .background(Color .white)
+            .cornerRadius(10)
+            .padding(.top, 25)
             
             Button(action: {}){
                 
-                Text("SIGNUP").foregroundColor(.white).fontWeight(.bold).padding(.vertical).frame(width: UIScreen.main.bounds.width - 100)
+                Text("SIGNUP")
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
+                    .padding(.vertical)
+                    .frame(width: UIScreen.main.bounds.width - 100)
                 
-            }.background(LinearGradient(gradient: .init(colors:[Color("primary"), Color("primary"), Color(.white)]), startPoint: .leading, endPoint: .trailing)).cornerRadius(8).offset(y: -40).padding(.bottom, -40).shadow(radius: 15)
+            }
+            .background(LinearGradient(gradient: .init(colors:[Color("primary"),
+                                                               Color("primary"),
+                                                               Color(.white)]
+            ),
+            startPoint: .leading,
+            endPoint: .trailing))
+            .cornerRadius(8)
+            .offset(y: -40)
+            .padding(.bottom, -40)
+            .shadow(radius: 15)
         }
+    }
+}
+
+struct ErrorView: View {
+    
+    @State var color = Color.black.opacity(0.7)
+    @Binding var alert: Bool
+    @Binding var error: String
+    
+    var body: some View{
+        
+        GeometryReader{_ in
+            
+            VStack{
+                
+                HStack{
+                    
+                    Text("Error")
+                        .font(.title)
+                        .foregroundColor(self.color)
+                    
+                    Spacer()
+                }
+                .padding(.horizontal, 25)
+                
+                Text(self.error)
+                    .foregroundColor(self.color)
+                    .padding(.top)
+                    .padding(.horizontal, 25)
+                
+                Button(action:{
+                    
+                }){
+                    Text("Cancel")
+                        .foregroundColor(.white)
+                        .padding(.vertical)
+                        .frame(width: UIScreen.main.bounds.width-120)
+                }
+                .background(Color("Color"))
+                .cornerRadius(10)
+                .padding(.top, 25)
+            }
+            .frame(width: UIScreen.main.bounds.width-70)
+            .background(Color.white)
+            .cornerRadius(15)
+        }
+        .background(Color.black.opacity(0.35).edgesIgnoringSafeArea(.all))
     }
 }
