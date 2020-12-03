@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,12 @@
 		42C081852536418A00EB7C65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C081832536418A00EB7C65 /* LaunchScreen.storyboard */; };
 		42C081902536418A00EB7C65 /* instaISILTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C0818F2536418A00EB7C65 /* instaISILTests.swift */; };
 		42C0819B2536418A00EB7C65 /* instaISILUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C0819A2536418A00EB7C65 /* instaISILUITests.swift */; };
-		AFA20B18257650B80047D4E0 /* Publications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA20B17257650B80047D4E0 /* Publications.storyboard */; };
+		8B55FCF086CA541D13F7AECE /* Pods_instaISIL_instaISILUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03425BEA26F33B1953F25508 /* Pods_instaISIL_instaISILUITests.framework */; };
+		8C30B1D2AB3C6FF6FC9A9F7C /* Pods_instaISILTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B756AC38A8EDDAE09CA9E99A /* Pods_instaISILTests.framework */; };
+		AB8E1DF1C6877D0AFAF49884 /* Pods_instaISIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB2DB0F041D65028E7A391A /* Pods_instaISIL.framework */; };
+		AFE509102578AF9500CBAA65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFE5090F2578AF9500CBAA65 /* GoogleService-Info.plist */; };
+		AFE509232578C1EB00CBAA65 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE509222578C1EB00CBAA65 /* Home.storyboard */; };
+		AFE5093A2578C71B00CBAA65 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE509392578C71B00CBAA65 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03425BEA26F33B1953F25508 /* Pods_instaISIL_instaISILUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instaISIL_instaISILUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03F5E2439A7FD63F4F7AB565 /* Pods-instaISIL-instaISILUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaISIL-instaISILUITests.release.xcconfig"; path = "Target Support Files/Pods-instaISIL-instaISILUITests/Pods-instaISIL-instaISILUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3F6B356FC1E9A41E2B1F6D00 /* Pods-instaISIL-instaISILUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaISIL-instaISILUITests.debug.xcconfig"; path = "Target Support Files/Pods-instaISIL-instaISILUITests/Pods-instaISIL-instaISILUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3FF4A6EE62C7BD0C145601A9 /* Pods-instaISIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaISIL.debug.xcconfig"; path = "Target Support Files/Pods-instaISIL/Pods-instaISIL.debug.xcconfig"; sourceTree = "<group>"; };
 		42C081752536418900EB7C65 /* instaISIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instaISIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C081782536418900EB7C65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42C0817A2536418900EB7C65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +59,14 @@
 		42C081962536418A00EB7C65 /* instaISILUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instaISILUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C0819A2536418A00EB7C65 /* instaISILUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instaISILUITests.swift; sourceTree = "<group>"; };
 		42C0819C2536418A00EB7C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFA20B17257650B80047D4E0 /* Publications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Publications.storyboard; sourceTree = "<group>"; };
+		AEB2DB0F041D65028E7A391A /* Pods_instaISIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instaISIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFE5090F2578AF9500CBAA65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AFE509222578C1EB00CBAA65 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		AFE509392578C71B00CBAA65 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B756AC38A8EDDAE09CA9E99A /* Pods_instaISILTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instaISILTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7E39143E022AEF1215AD5C8 /* Pods-instaISIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaISIL.release.xcconfig"; path = "Target Support Files/Pods-instaISIL/Pods-instaISIL.release.xcconfig"; sourceTree = "<group>"; };
+		C82BDC4098DA053EF9A8E4B4 /* Pods-instaISILTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaISILTests.release.xcconfig"; path = "Target Support Files/Pods-instaISILTests/Pods-instaISILTests.release.xcconfig"; sourceTree = "<group>"; };
+		E21134410C08B7E9DB3C7F79 /* Pods-instaISILTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaISILTests.debug.xcconfig"; path = "Target Support Files/Pods-instaISILTests/Pods-instaISILTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8E1DF1C6877D0AFAF49884 /* Pods_instaISIL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C30B1D2AB3C6FF6FC9A9F7C /* Pods_instaISILTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B55FCF086CA541D13F7AECE /* Pods_instaISIL_instaISILUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +104,8 @@
 				42C0818E2536418A00EB7C65 /* instaISILTests */,
 				42C081992536418A00EB7C65 /* instaISILUITests */,
 				42C081762536418900EB7C65 /* Products */,
+				CB0201A542E6D06DAEF1C2F9 /* Pods */,
+				D67F64679330473A0AC7C4EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +122,7 @@
 		42C081772536418900EB7C65 /* instaISIL */ = {
 			isa = PBXGroup;
 			children = (
+				AFE5090F2578AF9500CBAA65 /* GoogleService-Info.plist */,
 				AF059BAC2576FAD800C4241F /* WS */,
 				AFA20B1525764FCB0047D4E0 /* IPhone */,
 				AFA20B1425764FBD0047D4E0 /* BL */,
@@ -175,7 +197,7 @@
 		AFA20B1625764FD90047D4E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AFA20B17257650B80047D4E0 /* Publications.storyboard */,
+				AFE509222578C1EB00CBAA65 /* Home.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,8 +205,40 @@
 		AFA20B1F257651590047D4E0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AFE509272578C35E00CBAA65 /* Home */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		AFE509272578C35E00CBAA65 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AFE509392578C71B00CBAA65 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CB0201A542E6D06DAEF1C2F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3FF4A6EE62C7BD0C145601A9 /* Pods-instaISIL.debug.xcconfig */,
+				C7E39143E022AEF1215AD5C8 /* Pods-instaISIL.release.xcconfig */,
+				3F6B356FC1E9A41E2B1F6D00 /* Pods-instaISIL-instaISILUITests.debug.xcconfig */,
+				03F5E2439A7FD63F4F7AB565 /* Pods-instaISIL-instaISILUITests.release.xcconfig */,
+				E21134410C08B7E9DB3C7F79 /* Pods-instaISILTests.debug.xcconfig */,
+				C82BDC4098DA053EF9A8E4B4 /* Pods-instaISILTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D67F64679330473A0AC7C4EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEB2DB0F041D65028E7A391A /* Pods_instaISIL.framework */,
+				03425BEA26F33B1953F25508 /* Pods_instaISIL_instaISILUITests.framework */,
+				B756AC38A8EDDAE09CA9E99A /* Pods_instaISILTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,9 +248,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42C0819F2536418A00EB7C65 /* Build configuration list for PBXNativeTarget "instaISIL" */;
 			buildPhases = (
+				B8F9D4ED779F035DBE8BC238 /* [CP] Check Pods Manifest.lock */,
 				42C081712536418900EB7C65 /* Sources */,
 				42C081722536418900EB7C65 /* Frameworks */,
 				42C081732536418900EB7C65 /* Resources */,
+				E9E457ABD79E19B7A0F30ADE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -211,6 +267,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42C081A22536418A00EB7C65 /* Build configuration list for PBXNativeTarget "instaISILTests" */;
 			buildPhases = (
+				C49875C458DBFFB0D75778EE /* [CP] Check Pods Manifest.lock */,
 				42C081872536418A00EB7C65 /* Sources */,
 				42C081882536418A00EB7C65 /* Frameworks */,
 				42C081892536418A00EB7C65 /* Resources */,
@@ -229,9 +286,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42C081A52536418A00EB7C65 /* Build configuration list for PBXNativeTarget "instaISILUITests" */;
 			buildPhases = (
+				B2D4EB9EAC9B66BBA005648B /* [CP] Check Pods Manifest.lock */,
 				42C081922536418A00EB7C65 /* Sources */,
 				42C081932536418A00EB7C65 /* Frameworks */,
 				42C081942536418A00EB7C65 /* Resources */,
+				73540C55E5F0D10FD2E9A741 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -291,9 +350,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				42C081852536418A00EB7C65 /* LaunchScreen.storyboard in Resources */,
+				AFE509232578C1EB00CBAA65 /* Home.storyboard in Resources */,
 				42C081822536418A00EB7C65 /* Preview Assets.xcassets in Resources */,
+				AFE509102578AF9500CBAA65 /* GoogleService-Info.plist in Resources */,
 				42C0817F2536418A00EB7C65 /* Assets.xcassets in Resources */,
-				AFA20B18257650B80047D4E0 /* Publications.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +373,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		73540C55E5F0D10FD2E9A741 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-instaISIL-instaISILUITests/Pods-instaISIL-instaISILUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-instaISIL-instaISILUITests/Pods-instaISIL-instaISILUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-instaISIL-instaISILUITests/Pods-instaISIL-instaISILUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2D4EB9EAC9B66BBA005648B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-instaISIL-instaISILUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8F9D4ED779F035DBE8BC238 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-instaISIL-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C49875C458DBFFB0D75778EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-instaISILTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9E457ABD79E19B7A0F30ADE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-instaISIL/Pods-instaISIL-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-instaISIL/Pods-instaISIL-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-instaISIL/Pods-instaISIL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		42C081712536418900EB7C65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -321,6 +484,7 @@
 				42C081792536418900EB7C65 /* AppDelegate.swift in Sources */,
 				42C0817B2536418900EB7C65 /* SceneDelegate.swift in Sources */,
 				42C0817D2536418900EB7C65 /* ContentView.swift in Sources */,
+				AFE5093A2578C71B00CBAA65 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +649,7 @@
 		};
 		42C081A02536418A00EB7C65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FF4A6EE62C7BD0C145601A9 /* Pods-instaISIL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -505,6 +670,7 @@
 		};
 		42C081A12536418A00EB7C65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7E39143E022AEF1215AD5C8 /* Pods-instaISIL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -525,6 +691,7 @@
 		};
 		42C081A32536418A00EB7C65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E21134410C08B7E9DB3C7F79 /* Pods-instaISILTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -546,6 +713,7 @@
 		};
 		42C081A42536418A00EB7C65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C82BDC4098DA053EF9A8E4B4 /* Pods-instaISILTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -567,6 +735,7 @@
 		};
 		42C081A62536418A00EB7C65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F6B356FC1E9A41E2B1F6D00 /* Pods-instaISIL-instaISILUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -586,6 +755,7 @@
 		};
 		42C081A72536418A00EB7C65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03F5E2439A7FD63F4F7AB565 /* Pods-instaISIL-instaISILUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
