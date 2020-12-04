@@ -9,6 +9,7 @@ import SwiftUI
 import Firebase
 
 struct ContentView: View {
+    
     var body: some View {
         
         ZStack{
@@ -38,6 +39,29 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+struct HomeController: UIViewControllerRepresentable{
+    
+        
+    func makeUIViewController(context: UIViewControllerRepresentableContext<HomeController>) -> UIViewController {
+        
+        let storyboard = UIStoryboard(name: "Home", bundle: Bundle.main)
+        let controller = storyboard.instantiateViewController(identifier: "Home")
+        
+        print("makeUI")
+        
+        return controller
+        
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<HomeController>) {
+        
+        print("updateUI")
+    }
+    
+}
+
 
 struct Home: View{
     
@@ -239,7 +263,7 @@ struct Login: View {
         
         if self.mail == "" && self.pass == ""
         {
-            self.error = "Por favor llene las credenciales solicitadas"
+            self.error = "Por favor llene las credenciales solicitadas."
             self.alert.toggle()
         }
         else if self.mail == ""
@@ -254,18 +278,25 @@ struct Login: View {
         }
         else
         {
+            /*
             Auth.auth().signIn(withEmail: self.mail, password: self.pass){
                 (res, err) in
                 
                 if err != nil {
                     self.error = err!.localizedDescription
                     self.alert.toggle()
+                    return
                 }
                 
                 print("success")
                 UserDefaults.standard.set(true, forKey: "status")
                 NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
             }
+            */
+            
+            print("entrar al Home")
+            
+            //HomeController()
         }
     }
 }
@@ -413,9 +444,24 @@ struct SignUp: View {
         }
         else
         {
+            Auth.auth().createUser(withEmail: self.mail, password: pass){
+                (res, err) in
+                
+                if err != nil{
+                    self.error = err!.localizedDescription
+                    self.alert.toggle()
+                    return
+                }
+                
+                print("success")
+                
+                UserDefaults.standard.set(true, forKey: "status")
+                NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+            }
             
         }
     }
+
 }
 
 struct ErrorView: View {
@@ -467,3 +513,6 @@ struct ErrorView: View {
         .cornerRadius(15)
     }
 }
+
+
+
